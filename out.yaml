@@ -10,7 +10,7 @@ Resources:
   HelloWorldFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://s3-simple-lambda/6b6765ecbc680e0069c34e5c5e00ce00
+      CodeUri: s3://s3-simple-lambda/852defa083013525dc4d23d22a17c807
       Handler: helloworld.App::handleRequest
       Runtime: java11
       Policies:
@@ -32,6 +32,11 @@ Resources:
             Stream: arn:aws:kafka:us-east-2:159363735810:cluster/test-cluster-1/cc80ac7c-3edf-4c6d-95c7-bce68fd48023-7
             Topics:
             - mp.inventory.v1
+      VpcConfig:
+        SecurityGroupIds:
+        - sg-8bd7fefd
+        SubnetIds:
+        - subnet-a10e28ed
 Outputs:
   HelloWorldApi:
     Description: API Gateway endpoint URL for Prod stage for Hello World function

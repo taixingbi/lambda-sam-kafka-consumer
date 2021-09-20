@@ -37,11 +37,11 @@ Resources:
             Topics:
             - mp.inventory.v1
 
-#      VpcConfig:
-#        SecurityGroupIds:
-#        - sg-8bd7fefd
-#        SubnetIds:
-#        - subnet-a10e28ed
+      VpcConfig:
+        SecurityGroupIds:
+        - sg-8bd7fefd
+        SubnetIds:
+        - subnet-a10e28ed
 
 Outputs:
   # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
